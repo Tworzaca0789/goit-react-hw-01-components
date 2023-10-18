@@ -46,4 +46,5 @@ Profile.defaultProps = {
     likes: '0',
   },
 };
+
 export default Profile;
