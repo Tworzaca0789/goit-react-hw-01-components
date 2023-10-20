@@ -1,0 +1,38 @@
+.transactionHistory {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: aquamarine;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  gap: 10px;
+}
+.head {
+  text-transform: uppercase;
+  line-height: 2;
+  color: crimson;
+  font-size: 20px;
+  padding-left: 20px;
+}
+.type,
+.amount,
+.currency {
+  display: inline;
+  line-height: 2;
+  margin-left: 10px;
+}
+.body {
+  color: blue;
+  font-weight: bold;
+}
+.bodyItem {
+  background-color: azure;
+  font-size: 20px;
+}
+.typeTd,
+.amountTd,
+.currencyTd {
+  border-left: 10px solid white;
+  border-right: 10px solid white;
+}

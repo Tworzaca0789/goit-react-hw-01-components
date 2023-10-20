@@ -1,26 +1,20 @@
 import styles from './friend.module.css';
 import PropTypes from 'prop-types';
 
-export const FriendListItem = _ref => {
-  let { friend } = _ref;
+export const FriendListItem = ({ avatar, name, isOnline }) => {
   return (
     <>
-      <li className={styles.item} key={friend.id}>
-        <span
-          className={(styles.status, { [styles.isOnline]: friend.isOnline })}
-        ></span>
-        <img
-          className={styles.avatar}
-          src={friend.avatar}
-          alt={friend.name}
-          width="48"
-        />
-        <p className={styles.name}>{friend.name}</p>
+      <li className={styles.item}>
+        <span className={isOnline ? styles.online : styles.offline} />
+        <img className={styles.avatar} src={avatar} alt={name} width="48" />
+        <p className={styles.name}>{name}</p>
       </li>
     </>
   );
 };
 FriendListItem.propTypes = {
-  friends: PropTypes.array.isRequired,
+  avatar: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  isOnline: PropTypes.bool.isRequired,
 };
 export default FriendListItem;

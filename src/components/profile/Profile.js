@@ -1,6 +1,6 @@
 import styles from './profile.module.css';
 import PropTypes from 'prop-types';
-export const Profile = ({ username, tag, location, avatar, stats }) => {
+const Profile = ({ username, tag, location, avatar, stats }) => {
   return (
     <div className={styles.profile}>
       <div className={styles.description}>
@@ -14,10 +14,12 @@ export const Profile = ({ username, tag, location, avatar, stats }) => {
           <span className={styles.label}>Followers</span>
           <span className={styles.quantity}>{stats.followers}</span>
         </li>
+
         <li>
           <span className={styles.label}>Views</span>
           <span className={styles.quantity}>{stats.views}</span>
         </li>
+
         <li>
           <span className={styles.label}>Likes</span>
           <span className={styles.quantity}>{stats.likes}</span>
@@ -33,18 +35,6 @@ Profile.propTypes = {
   location: PropTypes.string.isRequired,
   avatar: PropTypes.string.isRequired,
   stats: PropTypes.object.isRequired,
-};
-
-Profile.defaultProps = {
-  name: 'User name',
-  tag: '@User tag',
-  location: 'User location',
-  avatar: 'https://cdn-icons-png.flaticon.com/512/2922/2922506.png',
-  stats: {
-    followers: '0',
-    views: '0',
-    likes: '0',
-  },
 };
 
 export default Profile;

@@ -1,7 +1,7 @@
-import { Profile } from './profile/Profile';
-import { FriendList } from './friend/FriendList';
-import { Statistic } from './statistics/Statistics';
-import { TransactionHistory } from './transactionHistory/TransactionHistory';
+import  Profile  from './profile/Profile';
+import  FriendList  from './friend/FriendList';
+import  Statistic  from './statistics/Statistics';
+import  TransactionHistory from './transactionHistory/TransactionHistory';
 import user from './profile/user.json';
 import data from './statistics/data.json';
 import friends from './friend/friends.json';
@@ -25,14 +25,3 @@ export const App = () => {
   );
 }
 export default App;
-
-// <Statistic stats={data}/>
-//React homework template
-//style={{
-    //     height: '100vh',
-    //     display: 'flex',
-    //     justifyContent: 'center',
-    //     alignItems: 'center',
-    //     fontSize: 40,
-    //     color: '#010101'
-    //   }}
